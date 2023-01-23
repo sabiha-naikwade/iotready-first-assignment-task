@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgba(230, 230, 230, 0.651);
+}
+
+.first-section {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.first-section .inp-details {
+  margin-top: 23px;
+}
+
+.inp-details .box {
+  margin: 15px;
+}
+
+.inp-details .inlineBlock {
+  display: inline-flex;
+}
+
+.box .details {
+  display: block;
+}
+
+.box input {
+  height: 30px;
+  width: 300px;
+  outline: none;
+}
+
+.second-section {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  margin-top: 15px;
+}
+
+.second-section .second h3 {
+  margin-bottom: 23px;
+  margin-top: 23px;
+}
+
+.second-section .second p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+table {
+  margin-bottom: 15px;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+.third-section {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  margin-top: 15px;
+}
+
+.third-section .third h3 {
+  margin-bottom: 23px;
+  margin-top: 23px;
+}
+
+.third-section .third p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="first-section">
+            <form action="#">
+                <div class="inp-details">
+                    <div class="inlineBlock">
+                        <div class="box">
+                            <span class="details">Hub</span>
+                            <input type="text" placeholder="{{user.hub}}">
+                        </div>
+                        <div class="box" id="inlineblk2">
+                            <span class="details">GRN</span>
+                            <input type="text" placeholder="">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <span class="details">Supplier</span>
+                        <input type="text" placeholder="{{user.supplier}}">
+                    </div>
+                    <div class="box">
+                        <span class="details">Supplier Name</span>
+                        <input type="text" placeholder="{{user.supplier_name}}">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="second-section">
+            <div class="second">
+                <h3>SKU Summary</h3>
+                <p>SKU Table</p>
+                <table style="border-collapse: collapse;">
+                    <thead>
+                        <tr>
+                            <th style="border: 1px solid rgb(155, 153, 153);">No.</th>
+                            <th style="border: 1px solid rgb(155, 153, 153);">SKU</th>
+                            <th style="border: 1px solid rgb(155, 153, 153);">SKU Description</th>
+                            <th style="border: 1px solid rgb(155, 153, 153);">Standard Crate Quality</th>
+                            <th style="border: 1px solid rgb(155, 153, 153);">Procured Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for sku_table in user.sku_table %}
+                        <tr>
+                            <td style="border: 1px solid rgb(155, 153, 153);">{{sku_table.idx}}</td>
+                            <td style="border: 1px solid rgb(155, 153, 153);">{{sku_table.sku}}</td>
+                            <td style="border: 1px solid rgb(155, 153, 153);">{{sku_table.sku_description}}</td>
+                            <td style="border: 1px solid rgb(155, 153, 153);">{{sku_table.standard_crate_quantity}}</td>
+                            <td style="border: 1px solid rgb(155, 153, 153);">{{sku_table.quantity}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="third-section">
+            <div class="third">
+                <h3>Crate list</h3>
+                <p>Crate Table</p>
+                <table style="border-collapse: collapse;">
+                    <thead>
+                        <tr>
+                            <th style="border: 1px solid rgb(155, 153, 153);">No.</th>
+                            <th style="border: 1px solid rgb(155, 153, 153);">Crate</th>
+                            <th style="border: 1px solid rgb(155, 153, 153);">SKU</th>
+                            <th style="border: 1px solid rgb(155, 153, 153);">Packed Quantity</th>
+                            <th style="border: 1px solid rgb(155, 153, 153);">Crate Weight</th>
+                            <th style="border: 1px solid rgb(155, 153, 153);">Is Final Crate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for crate_table in user.crate_table %}
+                        <tr>
+                            <td style="border: 1px solid rgb(155, 153, 153);">{{crate_table.idx}}</td>
+                            <td style="border: 1px solid rgb(155, 153, 153);">{{crate_table.crate}}</td>
+                            <td style="border: 1px solid rgb(155, 153, 153);">{{crate_table.sku}}</td>
+                            <td style="border: 1px solid rgb(155, 153, 153);">{{crate_table.packed_quantity}}</td>
+                            <td style="border: 1px solid rgb(155, 153, 153);">{{crate_table.crate_weight}}</td>
+                            <td style="border: 1px solid rgb(155, 153, 153);">{{crate_table.is_final_crate}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
